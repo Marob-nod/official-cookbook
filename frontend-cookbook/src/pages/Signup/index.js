@@ -1,9 +1,9 @@
 import './styles.scss';
 
-const  = () => (
-    <div className=''>
-
+const SignupPage = () => (
+    <div className='signuppage_container'>
+        <h1>Signup Page</h1>
     </div>
 );
 
-export default ; 
+export default SignupPage; 

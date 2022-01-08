@@ -1,9 +1,9 @@
 import './styles.scss';
 
-const  = () => (
-    <div className=''>
-
+const ProfilPage = () => (
+    <div className='profilpage_container'>
+        <h1>Profil Page</h1>
     </div>
 );
 
-export default ; 
+export default ProfilPage; 

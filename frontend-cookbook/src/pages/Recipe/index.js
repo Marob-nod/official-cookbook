@@ -1,9 +1,9 @@
 import './styles.scss';
 
-const  = () => (
-    <div className=''>
-
+const RecipePage = () => (
+    <div className='recipepage_container'>
+        <h1>Recipe Page</h1>
     </div>
 );
 
-export default ; 
+export default RecipePage; 

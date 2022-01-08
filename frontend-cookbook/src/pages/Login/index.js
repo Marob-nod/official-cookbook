@@ -1,9 +1,9 @@
 import './styles.scss';
 
-const  = () => (
-    <div className=''>
-
+const LoginPage = () => (
+    <div className='loginpage_container'>
+        <h1>Login Page</h1>
     </div>
 );
 
-export default ; 
+export default LoginPage; 
