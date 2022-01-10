@@ -6,8 +6,6 @@
     width: 200px;
     height: 300px;
     font-size: 0.7rem;
-    //border: solid 1px ;
-    //padding: 2px;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 6px );
@@ -58,11 +56,9 @@
             h2 {
                 font-size: 0.6rem;
             }
-
         }
 
         &_specifications {
-
             font-size: 0.5rem;
             height: 20px;
             padding: 0;
@@ -73,7 +69,6 @@
                 margin: 0;
                 height: unset;
             }
-
         }
 
         img {
