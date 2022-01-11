@@ -1,5 +1,5 @@
 import './styles.scss';
-import dataRecipes from '../../data/recipes'
+import dataRecipes from '../../public/data/recipes'
 import RecipeCard from '../../components/recipe-card';
 import Navbar from '../../components/Navbar/Navbar-desktop';
 

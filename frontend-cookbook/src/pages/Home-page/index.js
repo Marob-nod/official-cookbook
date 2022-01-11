@@ -1,9 +1,11 @@
+import Banner from "../../components/Banner";
 import Header from "../../components/Header";
 
 const HomePage = () => (
     <div className='homepage_container'>
         <Header />
-        <h1>HomePage</h1>
+        <Banner />
+
     </div>
 );
 

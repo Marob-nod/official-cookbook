@@ -4,6 +4,8 @@
 
     transition: ease 0.4s;
     transform: translateX(150px);
+    overflow-x: unset;
+
 
     &-open {
     position: fixed;

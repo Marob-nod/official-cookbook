@@ -1,0 +1,40 @@
+@import '../../settings';
+
+.banner_container {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    height: 60vh;
+    background-image: url('../../public/bg-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+  
+    &_description {
+        width: 30vw;
+        background: rgba( 18, 100, 70, 0.85 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4.5px );
+        -webkit-backdrop-filter: blur( 4.5px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding: 20px;
+        margin: 20px;
+        font-weight: bold;
+        //background-color: whitesmoke;
+
+        &_title {
+            color: $secondColor;
+            margin-bottom: 30px;
+            font-weight: bolder;
+        }
+
+        &_text {
+            color: whitesmoke;
+            text-align: justify;
+        }
+        
+    }
+    
+
+}
