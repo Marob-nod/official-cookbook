@@ -8,27 +8,43 @@
     font-weight: bold;
     padding: 1px;
     height: 70px;
+    border-bottom: solid 1px $firstColor;
 
     &_toggle {
-        
         padding: 5px 11px 5px 11px;
-        border: solid 1px;
-        border-radius: 40px;
-        transform: translateX(150px);
+        border: solid 1px $firstColor;
+        color: $firstColor;
+        font-weight: bold;
+        border-radius: 50px;
         transition: ease 0.4s;
+        transform: translateX(150px) rotate(90deg);
+        &:hover {
+            filter: brightness(1.2);
+            color: whitesmoke;
+            background-color: $firstColor;
+        }
 
         &-open {
             padding: 5px 11px 5px 11px;
-            border: solid 1px;
+            border: solid 1px $firstColor;
+            background-color: $firstColor;
+            color: whitesmoke;
+            font-weight: bold;
             border-radius: 40px;
-            transform: rotateZ(-90deg);
-            transition: ease 0.4s;
             transform: translateX(-150px);
+            transition: ease 0.4s;
+            &:hover {
+                filter: brightness(1.2);
+                background-color: white;
+                color: $firstColor;
+                font-weight: bold;
+            }
             
         }
     }
    
     svg {
         font-size: 50px;
+        color: $firstColor;
     }
 }
