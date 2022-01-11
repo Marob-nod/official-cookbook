@@ -1,4 +1,4 @@
-@import '../../settings';
+@import '../../../settings';
 
 .navbar_container {
     display: flex;
@@ -8,6 +8,7 @@
     border-bottom: $fifthColor solid 2px;
     font-weight: bold;
     font-size: 0.9rem;
+    max-height: 70px;
 
     svg {
         font-size: 50px;

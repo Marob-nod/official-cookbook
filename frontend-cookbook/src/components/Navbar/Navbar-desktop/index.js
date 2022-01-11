@@ -2,10 +2,7 @@ import './styles.scss';
 import MenuBookTwoTone from '@mui/icons-material/MenuBookTwoTone';
 import { Button, Switch } from '@mui/material';
 
-
-
-
-const Navbar = () => {
+const NavbarDesktop = () => {
     return (
         <div className='navbar_container'>
             <MenuBookTwoTone />
@@ -27,4 +24,4 @@ const Navbar = () => {
 
 }
 
-export default Navbar;
+export default NavbarDesktop;

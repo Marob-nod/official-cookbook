@@ -1,7 +1,7 @@
 import './styles.scss';
 import dataRecipes from '../../data/recipes'
 import RecipeCard from '../../components/recipe-card';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Navbar/Navbar-desktop';
 
 const RecipesPage = () => (
     <div className='recipespage_container'>
