@@ -1,6 +1,9 @@
 import './styles.scss';
 import MenuBookTwoTone from '@mui/icons-material/MenuBookTwoTone';
-import { Avatar, Switch } from '@mui/material';
+import { Button, Switch } from '@mui/material';
+
+
+
 
 const Navbar = () => {
     return (
@@ -12,10 +15,12 @@ const Navbar = () => {
                 <li>Add a recipe</li>
                 <li>Profile</li>
             </ul>
-            <div className="navbar_container_buttons">
-                <Switch disabled defaultChecked />
-                <Avatar src="/broken-image.png" />
-            </div>
+            <ul className="navbar_container_buttons">
+                <li><Button variant='outlined' color='primary'>Login</Button></li>
+                <li><Button variant='contained' color='primary'>Sign up</Button></li>
+                <li><Switch disabled defaultChecked /></li>
+                {/* <li><Avatar src="/broken-image.png" /></li> */}
+            </ul>
 
         </div>
     );

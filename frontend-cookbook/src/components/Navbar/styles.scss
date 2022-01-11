@@ -2,21 +2,21 @@
 
 .navbar_container {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: $firstColor solid 2px;
+    padding: 7px;
+    border-bottom: $fifthColor solid 2px;
     font-weight: bold;
+    font-size: 0.9rem;
 
     svg {
         font-size: 50px;
     }
 
     &_links {
-        width: 70%;
         display: flex;
         justify-content: flex-start;
-        
+        margin-left: 45px;        
         li {
             margin-right: 30px;
             transition: ease-in-out 0.4s;
@@ -26,9 +26,20 @@
             }
         }
     }
-
     &_buttons {
         display: flex;
+        justify-content: space-between;
+        position: fixed;
+        right: 0px;
+        li {
+            margin-right: 30px;
+            transition: ease-in-out 0.4s;
+            
+            &:hover {
+                color: $firstColor;
+                cursor: pointer;
+            }
+        }
     }
 }
 
