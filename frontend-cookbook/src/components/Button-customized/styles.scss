@@ -1,3 +1,14 @@
-.principal-button {
-    background-color: yellow;
+@import '../../settings';
+
+.principal {
+    max-width: 10rem;
+    padding: 8px;
+    color: $firstColor;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: solid 1px $firstColor;
+
+    &:hover {
+        background: whitesmoke; 
+    }
 }

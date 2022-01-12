@@ -1,9 +1,10 @@
 import './styles.scss';
 
 
-const ButtonCustom = () => {
+const ButtonCustom = ({ name, className }) => {
     return (
-        <div className="">
+        <div className={className}>
+            {name}
         </div>
     );
 }

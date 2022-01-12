@@ -2,39 +2,43 @@
 
 .banner_container {
     display: flex;
+    max-width: 70vw;
+    justify-content: center;
     align-items: center;
-    width: 70vw;
-    height: 60vh;
-    background-image: url('../../public/bg-banner.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-  
+    text-align: justify;
+    //border: solid 2px $firstColor;
+    margin: 30px auto 10px auto;
+    background: $fourthColor;
+    opacity: 0.9;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    img {
+        max-width: 60%;
+        border-radius: 10px 0 0 10px ;
+    }
+
     &_description {
-        width: 30vw;
-        background: rgba( 18, 100, 70, 0.85 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4.5px );
-        -webkit-backdrop-filter: blur( 4.5px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-        padding: 20px;
-        margin: 20px;
-        font-weight: bold;
-        //background-color: whitesmoke;
+        padding: 10px;
 
         &_title {
-            color: $secondColor;
-            margin-bottom: 30px;
-            font-weight: bolder;
+            margin-bottom: 2rem;
+            
         }
 
         &_text {
-            color: whitesmoke;
-            text-align: justify;
+            padding: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 2rem;
         }
-        
-    }
-    
 
+        .principal {
+            
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
