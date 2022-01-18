@@ -1,0 +1,37 @@
+@import '../../settings';
+
+.tutorial_container {
+    margin: 30px auto 10px auto;
+    max-width: 70vw;
+
+    &_content {
+        display: flex;
+        justify-content: space-between;
+
+        &_item_container {
+            display: flex;
+            min-height: 25vh;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: whitesmoke;
+            font-weight: bold;
+            max-width: 20vw;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: $firstColor;
+            
+            &_text {
+                text-align: left;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .tutorial_container {
+        font-size: 0.7rem;
+
+    }
+}

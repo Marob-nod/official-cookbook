@@ -4,13 +4,14 @@
     display: flex;
     align-items: center;
     padding: 7px;
-    border-bottom: $fifthColor solid 2px;
+    border-bottom: $firstColor solid 2px;
     font-weight: bold;
     font-size: 0.9rem;
-    max-height: 70px;
+    height: 100%;
 
     svg {
         font-size: 50px;
+        color: $firstColor;
     }
 
     &_links {
@@ -50,7 +51,7 @@
     align-items: center;
     .hover {
       text-align: center;
-      margin: 0 auto;
+      //margin: 0 auto;
       padding: 0;
       transition: $animate;
       position: relative;

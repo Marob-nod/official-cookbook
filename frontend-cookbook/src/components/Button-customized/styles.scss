@@ -10,5 +10,24 @@
 
     &:hover {
         background: whitesmoke; 
+        cursor: pointer;
+    }
+}
+
+.secondary {
+    max-width: 10rem;
+    padding: 8px;
+    color: $firstColor;
+    font-weight: bolder;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: solid 1px $firstColor;
+    transition: ease-in-out 0.4s;
+
+    &:hover {
+        background: $firstColor;
+        color: whitesmoke; 
+        cursor: pointer;
+        transition: ease-in-out 0.4s;
     }
 }
