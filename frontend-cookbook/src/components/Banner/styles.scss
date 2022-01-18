@@ -3,6 +3,8 @@
 .banner_container {
     display: flex;
     max-width: 70vw;
+    //max-height: 50vh;
+    //min-height: 30vh;
     justify-content: center;
     align-items: center;
     text-align: justify;
@@ -18,11 +20,13 @@
 
     img {
         max-width: 60%;
+        height: 100%;
         border-radius: 10px 0 0 10px ;
     }
 
     &_description {
         padding: 10px;
+        height: 100%;
 
         &_title {
             margin-bottom: 2rem;
@@ -40,6 +44,21 @@
             
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .banner_container {
+        font-size: 0.7rem;
+        img {
+            width: 0;
+            height: 0;
+        }
+        &_description {
+            &_text {
+                line-height: normal;
+            }
         }
     }
 }
