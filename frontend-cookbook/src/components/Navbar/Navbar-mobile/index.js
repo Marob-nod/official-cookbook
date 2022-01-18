@@ -7,7 +7,7 @@ import MobileDrawer from '../../Mobile-drawer';
 
 const NavbarMobile = () => {
 
-    const [toggle, SetToggle] = useState('false')
+    const [toggle, SetToggle] = useState(false)
 
 
     return (
