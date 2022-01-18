@@ -5,10 +5,12 @@
     transition: ease 0.4s;
     transform: translateX(150px);
     overflow-x: unset;
+    
 
 
     &-open {
     position: fixed;
+    z-index: 2;
     right: 0;
     top: 0;
     padding: 10px ;
@@ -28,12 +30,14 @@
 
         li {
             margin-bottom: 15px;
+            text-align: left;
             border-bottom: solid 0.5px whitesmoke;
             cursor: pointer;
 
             &:hover {
                 color: $firstColor;
                 transition: ease-out 0.3s;
+                border-bottom: solid 0.5px $firstColor;
             }
         }
     }
