@@ -6,11 +6,15 @@ $thirdColor: #E1D6C1;
 $fourthColor: #B8D2C6;
 $fifthColor: #8DA69E;
 
+$animate: all 0.2s ease-in-out;
+
 * {
     text-decoration: none;
     list-style: none;
+    text-align: center;
 }
 
 h1 {
     color: $firstColor;
 }
+

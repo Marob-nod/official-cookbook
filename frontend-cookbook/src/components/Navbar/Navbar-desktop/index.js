@@ -7,10 +7,10 @@ const NavbarDesktop = () => {
         <div className='navbar_container'>
             <MenuBookTwoTone />
             <ul className="navbar_container_links">
-                <li>Home</li>
-                <li>All recipes</li>
-                <li>Add a recipe</li>
-                <li>Profile</li>
+                <li className='example'><span className="hover hover-1">Home</span></li>
+                <li className='example'><span className="hover hover-1">All recipes</span></li>
+                <li className='example'><span className="hover hover-1">Add a recipe</span></li>
+                <li className='example'><span className="hover hover-1">Profile</span></li>
             </ul>
             <ul className="navbar_container_buttons">
                 <li><Button variant='outlined' color='primary'>Login</Button></li>
