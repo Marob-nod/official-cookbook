@@ -46,7 +46,6 @@ const Header = () => {
             }}>
                 {matches => (
                     <Fragment>
-
                         {matches.small && <NavbarMobile />}
                         {matches.large && <NavbarDesktop />}
                     </Fragment>

@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/Home-page'
 import './App.scss';
 import RecipesPage from './pages/Recipes'
@@ -11,13 +11,16 @@ import ProfilPage from './pages/Profil'
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />}>
 
         </Route>
         <Route path="/recipes" element={<RecipesPage />}>
-          <Route path=":recipeSlug" element={<RecipePage />} />
+
+        </Route>
+        <Route path="/recipes/:recipeSlug" element={<RecipePage />}>
+
         </Route>
         <Route path="/login" element={<LoginPage />}>
 
@@ -32,12 +35,9 @@ function App() {
 
         </Route>
 
-
-
         <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>} />
       </Routes>
-
-    </div>
+    </BrowserRouter>
   );
 }
 
