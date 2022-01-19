@@ -1,13 +1,22 @@
 import './styles.scss';
 import dataRecipes from '../../public/data/recipes'
 import RecipeCard from '../../components/recipe-card';
-import Navbar from '../../components/Navbar/Navbar-desktop';
+import Header from '../../components/Header';
 
 const RecipesPage = () => (
     <div className='recipespage_container'>
-        <Navbar />
+        <Header />
         <h1>All recipes Page</h1>
         <div className="recipespage_container_list">
+            {dataRecipes.map((recipe) => (
+                <RecipeCard key={recipe.name} {...recipe} />
+            ))}
+            {dataRecipes.map((recipe) => (
+                <RecipeCard key={recipe.name} {...recipe} />
+            ))}
+            {dataRecipes.map((recipe) => (
+                <RecipeCard key={recipe.name} {...recipe} />
+            ))}
             {dataRecipes.map((recipe) => (
                 <RecipeCard key={recipe.name} {...recipe} />
             ))}
