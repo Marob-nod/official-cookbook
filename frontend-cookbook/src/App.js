@@ -17,7 +17,7 @@ function App() {
 
         </Route>
         <Route path="/recipes" element={<RecipesPage />}>
-
+          <Route path=":recipeSlug" element={<RecipePage />} />
         </Route>
         <Route path="/login" element={<LoginPage />}>
 
@@ -31,9 +31,10 @@ function App() {
         <Route path="/create-recipe" element={<CreateRecipe />}>
 
         </Route>
-        <Route>
 
-        </Route>
+
+
+        <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>} />
       </Routes>
 
     </div>
