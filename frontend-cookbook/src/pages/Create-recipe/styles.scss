@@ -1,12 +1,12 @@
 .createrecipe_container_form {
     display: flex ;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     padding: 3rem;
     
     .form-items {
         width: 20%;
-        margin-bottom: 2rem;
+        margin: 2rem;
     }
     
 }
