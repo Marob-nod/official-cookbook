@@ -1,6 +1,16 @@
 const express = require('express')
-const app = express()
 const dataRecipes = require('./data/recipes')
+const mongoose = require('mongoose')
+const app = express()
+const Recipe = require('./models/recipe')
+
+mongoose.connect('mongodb+srv://Marob-nod:RYLIegre2+5+@cluster0.5lamp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
+    .then(() => console.log('Connexion à MongoDB réussie !'))
+    .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 app.use(express.json())
 
@@ -12,10 +22,12 @@ app.use((req, res, next) => {
 });
 
 app.post('/recipes', (req, res, next) => {
-    console.log(req.body)
-    res.status(201).json({
-        message: 'Recette créée !!!'
+    const recipe = new Recipe({
+        ...req.body
     })
+    recipe.save()
+        .then(() => res.status(201).json({ message: 'Objet enregistré !' }))
+        .catch(err => res.status(400).json({ err }))
 })
 
 app.get('/recipes', (req, res, next) => {
