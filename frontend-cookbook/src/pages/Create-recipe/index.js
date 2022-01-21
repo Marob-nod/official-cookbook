@@ -15,8 +15,8 @@ const CreateRecipe = () => {
     const [serves, setServes] = useState('')
     const [level, setLevel] = useState('')
     const [imgUrl, setImgUrl] = useState('')
-    const [cookingTime, setCookingTime] = useState(null)
-    const [prepTime, setPrepTime] = useState(null)
+    const [cookingTime, setCookingTime] = useState('')
+    const [prepTime, setPrepTime] = useState('')
     const [instructions, setInstructions] = useState([])
     const [ingredients, setIngredients] = useState([])
     const [isSubmitted, setIsSubmitted] = useState(false)
@@ -35,6 +35,7 @@ const CreateRecipe = () => {
             "level": level,
             "ingredients": ingredients,
             "instructions": instructions,
+            "imgUrl": imgUrl
         })
         axios
             .post(
@@ -47,6 +48,7 @@ const CreateRecipe = () => {
                     "level": level,
                     "ingredients": ingredients,
                     "instructions": instructions,
+                    "imgUrl": imgUrl
                 },
                 optionsAxios
             )
@@ -63,15 +65,15 @@ const CreateRecipe = () => {
             <form className='createrecipe_container_form'>
                 <h1><input type="text" autoComplete='off' className='form-input' placeholder="Title" value={titleRecipe} onChange={(e) => setTitleRecipe(e.target.value)} /></h1>
                 <div>
-                    <input className='form-input' placeholder="Cooking Time" value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
-                    <input className='form-input' placeholder="Preparation Time" value={prepTime} onChange={(e) => setPrepTime(e.target.value)} />
-                    <input className='form-input' placeholder="Number of Serves" value={serves} onChange={(e) => setServes(e.target.value)} />
-                    <input className='form-input' placeholder="Level" value={level} onChange={(e) => setLevel(e.target.value)} />
+                    <input type="number" className='form-input' placeholder="Cooking Time" value={cookingTime} onChange={(e) => setCookingTime(e.target.value)} />
+                    <input type="number" className='form-input' placeholder="Preparation Time" value={prepTime} onChange={(e) => setPrepTime(e.target.value)} />
+                    <input type="number" className='form-input' placeholder="Number of Serves" value={serves} onChange={(e) => setServes(e.target.value)} />
+                    <input type="text" className='form-input' placeholder="Level" value={level} onChange={(e) => setLevel(e.target.value)} />
                 </div>
                 <div>
-                    <input className='form-input' placeholder="Image Url" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} />
-                    <input className='form-input' placeholder="Instructions" value={instructions} onChange={(e) => setInstructions(e.target.value)} />
-                    <input className='form-input' placeholder="Ingredients" value={ingredients} onChange={(e) => setIngredients(e.target.value)} />
+                    <input type="text" className='form-input' placeholder="Image Url" value={imgUrl} onChange={(e) => setImgUrl(e.target.value)} />
+                    <input type="text" className='form-input' placeholder="Instructions" value={instructions} onChange={(e) => setInstructions(e.target.value)} />
+                    <input type="text" className='form-input' placeholder="Ingredients" value={ingredients} onChange={(e) => setIngredients(e.target.value)} />
                 </div>
                 <ButtonCustom name="Submit" className="secondary" handleClick={handleSubmit} />
             </form>
