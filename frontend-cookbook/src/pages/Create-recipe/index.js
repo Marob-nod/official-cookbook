@@ -21,9 +21,7 @@ const CreateRecipe = () => {
     const [ingredients, setIngredients] = useState([])
     const [isSubmitted, setIsSubmitted] = useState(false)
 
-
-    const handleSubmit = (e) => {
-        //e.prevent.default()
+    const handleSubmit = () => {
         setIsSubmitted(true)
         createEvent();
     }
@@ -40,15 +38,15 @@ const CreateRecipe = () => {
         })
         axios
             .post(
-                "http://localhost:3000/recipes",
+                "http://localhost:3001/recipes",
                 {
-                    "title": "recette test",
-                    "cookingTime": "2",
-                    "prepTime": "20",
-                    "serves": "4",
-                    "level": "medium",
-                    "ingredients": "ingredients",
-                    "instructions": "instructions",
+                    "title": titleRecipe,
+                    "cookingTime": cookingTime,
+                    "prepTime": prepTime,
+                    "serves": serves,
+                    "level": level,
+                    "ingredients": ingredients,
+                    "instructions": instructions,
                 },
                 optionsAxios
             )
