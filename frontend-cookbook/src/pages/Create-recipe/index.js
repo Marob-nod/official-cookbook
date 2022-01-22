@@ -58,8 +58,6 @@ const CreateRecipe = () => {
             .catch((error) => console.log("Error de create event"));
     };
 
-    console.log('valeur de level : ', level)
-
     return (
         <div className='createrecipe_container'>
             <Header />
