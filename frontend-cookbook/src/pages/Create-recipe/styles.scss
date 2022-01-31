@@ -1,16 +1,16 @@
 @import '../../settings';
 
 .createrecipe_container_box {
-
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
+
+
+
     .createrecipe_container_form {
-        display: flex ;
-        flex-direction: column;
-        justify-content: center;
-        width: 70%;
+        width: 30%;
         padding: 3rem;
+        margin: auto;
         background-color: $thirdColor;
         border-radius: 20px;
         border: 2px solid $firstColor;
@@ -18,9 +18,6 @@
         
     
         .createrecipe_container_form_content {
-            display: flex;
-            //flex-direction: column;
-            //padding: 0;
     
             &_item  {
                 display: flex;

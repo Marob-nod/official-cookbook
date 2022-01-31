@@ -27,6 +27,18 @@ const CreateRecipe = () => {
         createEvent();
     }
 
+    const handleChangeInstructions = (e) => {
+        setInstructions(e.target.value)
+        const arr = e.target.value.split(', ')
+        console.log('Array recup : ', arr)
+    }
+
+    const handleChangeIngredients = (e) => {
+        setIngredients(e.target.value)
+        const arr = e.target.value.split(', ')
+        console.log('Array recup : ', arr)
+    }
+
 
 
     const createEvent = () => {
@@ -106,11 +118,11 @@ const CreateRecipe = () => {
                             <label for="imgUrl">Url link of the recipe picture</label>
                         </div>
                         <div className="createrecipe_container_form_content_item">
-                            <textarea type="text" className='form-input' placeholder="1 per row" name='instructions' value={instructions} onChange={(e) => setInstructions(e.target.value)} />
+                            <textarea type="text" className='form-input' placeholder="Separated by a comma: mix the vegetables, keep 1h in the fridge, ..." name='instructions' value={instructions} onChange={handleChangeInstructions} />
                             <label for="instructions">Instructions</label>
                         </div>
                         <div className="createrecipe_container_form_content_item">
-                            <textarea type="text" className='form-input' placeholder="Separated by a comma: milk, butter, letuce, ..." value={ingredients} name='ingredients' onChange={(e) => setIngredients(e.target.value)} />
+                            <textarea type="text" className='form-input' placeholder="Separated by a comma: milk, butter, letuce, ..." value={ingredients} name='ingredients' onChange={handleChangeIngredients} />
                             <label for="ingredients">Ingredients</label>
                         </div>
                     </div>

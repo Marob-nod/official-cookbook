@@ -3,11 +3,11 @@ import Equalizer from '@mui/icons-material/Equalizer'
 import AccessAlarm from '@mui/icons-material/AccessAlarm'
 
 
-const RecipeCard = ({ name, imgUrl, description, level, cookTime }) => (
+const RecipeCard = ({ title, imgUrl, description, level, cookingTime }) => (
     <div className='recipecard_container'>
-        <img src={imgUrl} alt={name} />
+        <img src={imgUrl} alt={title} />
         <div className="recipecard_container_infos">
-            <h2>{name.toLowerCase()}</h2>
+            <h2>{title.toLowerCase()}</h2>
             <p>{description}</p>
         </div>
         <div className="recipecard_container_specifications">
@@ -17,7 +17,7 @@ const RecipeCard = ({ name, imgUrl, description, level, cookTime }) => (
             </div>
             <div className="recipecard_container_specifications_cookingtime">
                 <AccessAlarm />
-                <div className='recipecard_container_specifications_cookingtime_name'>{cookTime}</div>
+                <div className='recipecard_container_specifications_cookingtime_name'>{cookingTime} min</div>
             </div>
         </div>
     </div>
