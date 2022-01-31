@@ -1,12 +1,38 @@
-.createrecipe_container_form {
-    display: flex ;
+@import '../../settings';
+
+.createrecipe_container_box {
+
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 3rem;
+    align-items: center;
+    .createrecipe_container_form {
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        padding: 3rem;
+        background-color: $thirdColor;
+        border-radius: 20px;
+        border: 2px solid $firstColor;
     
-    .form-items {
-        width: 20%;
-        margin: 2rem;
+        
+    
+        .createrecipe_container_form_content {
+            display: flex;
+            //flex-direction: column;
+            //padding: 0;
+    
+            &_item  {
+                display: flex;
+                flex-direction: column-reverse;
+                padding: 20px;
+    
+                .createrecipe_container_form_form-input {
+                    margin: auto;
+                    
+                }
+            }
+        }  
     }
-    
+
 }
