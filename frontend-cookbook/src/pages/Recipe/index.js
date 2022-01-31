@@ -6,7 +6,7 @@ import Header from '../../components/Header'
 const RecipePage = () => {
 
     let params = useParams()
-    let currentRecipe = dataRecipes.find(recipe => recipe.slug === params.recipeSlug)
+    let currentRecipe = dataRecipes.find(recipe => recipe._id === params._id)
     console.log('currentRecipe : ', currentRecipe)
 
 

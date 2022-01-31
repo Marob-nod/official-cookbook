@@ -39,7 +39,7 @@ const RecipesPage = () => {
             <h1>All recipes Page</h1>
             <div className="recipespage_container_list">
                 {dataRecipes.map((recipe) => (
-                    <Link to={`/recipes/${recipe.slug}`} key={recipe.title} ><RecipeCard  {...recipe} /></Link>
+                    <Link to={`/recipes/${recipe._id}`} key={recipe.title} ><RecipeCard  {...recipe} /></Link>
                 ))}
                 {dataRecipes.map((recipe) => (
                     <RecipeCard key={recipe.title} {...recipe} />

@@ -31,7 +31,9 @@ app.post('/recipes', (req, res, next) => {
 })
 
 app.get('/recipes', (req, res, next) => {
-    res.status(200).json(dataRecipes)
+    Recipe.find()
+        .then(things => res.status(200).json(things))
+        .catch(error => res.status(400).json({ error }))
 })
 
 module.exports = app

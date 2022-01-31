@@ -19,7 +19,7 @@ function App() {
         <Route path="/recipes" element={<RecipesPage />}>
 
         </Route>
-        <Route path="/recipes/:recipeSlug" element={<RecipePage />}>
+        <Route path="/recipes/:_id" element={<RecipePage />}>
 
         </Route>
         <Route path="/login" element={<LoginPage />}>
