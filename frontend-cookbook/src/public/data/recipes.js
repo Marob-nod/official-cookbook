@@ -1,6 +1,6 @@
 export default [{
     slug: 'mayo',
-    name: "Mayonnaise Maison",
+    title: "Mayonnaise Maison",
     description: "An awesome homemade mayonnaise with fresh ingredients. Perfect Match with sandwitchs, fresh vegetables or seafood",
     imgUrl: 'https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2018.2F07.2F30.2F87e4cf32-e091-455d-98b4-87cc601a2f0b.2Ejpeg/850x478/quality/90/crop-from/center/mayonnaise.jpeg',
     prepTime: '10 min',
@@ -29,7 +29,7 @@ export default [{
 },
 {
     slug: 'hummus',
-    name: "Hummus",
+    title: "Hummus",
     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     imgUrl: 'https://cdn.shopify.com/s/files/1/0057/7939/0579/products/easy-hummus-horiz-a-1800_1_1024x1024@2x.jpg?v=1588031143',
     prepTime: '10 min',
@@ -74,7 +74,7 @@ export default [{
 },
 {
     slug: 'tahini',
-    name: "Tahini",
+    title: "Tahini",
     description: "A paste made from sesame seeds originating in the Middle East, often used as an ingredient of hummus and other dips",
     imgUrl: 'https://www.196flavors.com/wp-content/uploads/2020/05/tahini-4-FP.jpeg',
     prepTime: '10 min',
@@ -103,7 +103,7 @@ export default [{
 },
 {
     slug: 'chickensoup',
-    name: "Chicken noodle soup",
+    title: "Chicken noodle soup",
     description: "Cure your Body, good for the throat, especially during winter",
     imgUrl: 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/164632.jpg',
     prepTime: '10 min',
@@ -156,7 +156,7 @@ export default [{
 },
 {
     slug: 'tomatosoup',
-    name: "Tomato Soup",
+    title: "Tomato Soup",
     description: "Tomato Soup really really goooood !!",
     imgUrl: 'https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/The-Best-Ever-Tomato-Soup_EXPS_CFFBZ22_222724_B10_01_2b.jpg',
     prepTime: '10 min',
@@ -208,7 +208,7 @@ export default [{
 },
 {
     slug: 'falafel',
-    name: "falafel",
+    title: "falafel",
     description: "A spicy mixture of ground vegetables (such as chickpeas or fava beans) formed into balls or patties and then fried.",
     imgUrl: 'https://turbigo-gourmandises.fr/wp-content/uploads/2020/04/recette-falafels-maison.jpg',
     prepTime: '10 min',
@@ -262,7 +262,7 @@ export default [{
 },
 {
     slug: 'bananabread',
-    name: "Banana Bread",
+    title: "Banana Bread",
     description: "A type of bread that is made with mashed fully ripe bananas. It is often a moist, sweet, cake-like quick bread",
     imgUrl: 'https://www.recette360.com/wp-content/uploads/2021/09/Banana-bread-au-thermomix.jpg',
     prepTime: '15 min',
@@ -298,7 +298,7 @@ export default [{
 },
 {
     slug: 'pastycrust',
-    name: "Pasty Crust",
+    title: "Pasty Crust",
     description: "sdqs",
     prepTime: '10 min',
     cookTime: '20 min',
@@ -342,7 +342,7 @@ export default [{
 },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -386,7 +386,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -430,7 +430,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -474,7 +474,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -518,7 +518,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -562,7 +562,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -606,7 +606,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -650,7 +650,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
@@ -694,7 +694,7 @@ export default [{
     // },
     // {
     //     slug: '/hummus',
-    //     name: "Hummus",
+    //     title: "Hummus",
     //     description: "An awesome libanese sauce to put on the of toasts during aperitif or starters",
     //     prepTime: '10 min',
     //     cookTime: '20 min',
