@@ -1,9 +1,9 @@
+import { Provider } from 'react-redux'
+import store from './Redux/store/index'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux'
-import store from './Redux/store/index'
 import App from './App';
 
 ReactDOM.render(

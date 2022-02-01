@@ -2,20 +2,22 @@ import './styles.scss';
 import Header from '../../components/Header';
 import ButtonCustom from '../../components/Button-customized';
 import { useDispatch, useSelector } from 'react-redux'
-import { changeCookingTime, changeImgUrl, changeIngredients, changeInstructions, changeLevel, changePrepTime, changeServes, changeTitleRecipe, createRecipe } from '../../Redux/actions/recipe';
+import { changeCookingTime, changeImgUrl, changeIngredients, changeInstructions, changeLevel, changePrepTime, changeServes, changeTitleRecipe, CHANGE_TITLERECIPE, createRecipe } from '../../Redux/actions/recipe';
+import { Input } from '@mui/material';
+import TextArea from '../../components/TextArea';
 
 const CreateRecipe = () => {
 
     const dispatch = useDispatch()
-    const titleRecipe = useSelector(state => state.recipe.getState(titleRecipe))
-    const optionsAxios = useSelector(state => state.common.getState(optionsAxios))
-    const serves = useSelector(state => state.recipe.getState(serves))
-    const level = useSelector(state => state.recipe.getState(level))
-    const imgUrl = useSelector(state => state.recipe.getState(imgUrl))
-    const cookingTime = useSelector(state => state.recipe.getState(cookingTime))
-    const prepTime = useSelector(state => state.recipe.getState(prepTime))
-    const instructions = useSelector(state => state.recipe.getState(instructions))
-    const ingredients = useSelector(state => state.recipe.getState(ingredients))
+    const titleRecipe = useSelector(state => state.recipe.titleRecipe)
+    const optionsAxios = useSelector(state => state.common.optionsAxios)
+    const serves = useSelector(state => state.recipe.serves)
+    const level = useSelector(state => state.recipe.level)
+    const imgUrl = useSelector(state => state.recipe.imgUrl)
+    const cookingTime = useSelector(state => state.recipe.cookingTime)
+    const prepTime = useSelector(state => state.recipe.prepTime)
+    const instructions = useSelector(state => state.recipe.instructions)
+    const ingredients = useSelector(state => state.recipe.ingredients)
 
     const handleSubmit = () => {
         dispatch(createRecipe())
@@ -73,22 +75,12 @@ const CreateRecipe = () => {
             <div className="createrecipe_container_box">
                 <h1 className='title-page'>Proposes nous ta recette</h1>
                 <form className='createrecipe_container_form'>
-                    <label for="title">Title of the Recipe</label>
-                    <h1><input type="text" autoComplete='off' name='title' className='form-input' placeholder="Title" value={titleRecipe} onChange={(e) => dispatch(changeTitleRecipe(e.target.value))} /></h1>
+                    <h1><Input type='text' name='titleRecipe' placeholder='Title of your recipe' /></h1>
 
                     <div className='createrecipe_container_form_content'>
-                        <div className="createrecipe_container_form_content_item">
-                            <input type="number" className='createrecipe_container_form_form-input' placeholder="Cooking Time" name='cookingTime' value={cookingTime} onChange={(e) => dispatch(changeCookingTime(e.target.value))} />
-                            <label for="cookingTime">Cooking Time</label>
-                        </div>
-                        <div className="createrecipe_container_form_content_item">
-                            <input type="number" className='createrecipe_container_form_form-input' placeholder="Preparation Time" name='prepTime' value={prepTime} onChange={(e) => dispatch(changePrepTime(e.target.value))} />
-                            <label for="prepTime">Preparation Time</label>
-                        </div>
-                        <div className="createrecipe_container_form_content_item">
-                            <input type="number" className='createrecipe_container_form_form-input' placeholder="Number of Serves" name='serves' value={serves} onChange={(e) => dispatch(changeServes(e.target.value))} />
-                            <label for="serves">Serves</label>
-                        </div>
+                        <Input type='number' name='cookingTime' placeholder='Cooking Time' />
+                        <Input type='number' name='prepTime' placeholder='Preparation Time' />
+                        <Input type='number' name='serves' placeholder='Serves' />
                         <div className='createrecipe_container_form_form-input_level'>
                             <p>Select a level for your recipe</p>
                             <div className='createrecipe_container_form_form-input_level-easy'>
@@ -107,18 +99,9 @@ const CreateRecipe = () => {
 
                     </div>
                     <div>
-                        <div className="createrecipe_container_form_content_item">
-                            <input type="url" className='form-input' placeholder="Image Url" name='imgUrl' value={imgUrl} onChange={(e) => dispatch(changeImgUrl(e.target.value))} />
-                            <label for="imgUrl">Url link of the recipe picture</label>
-                        </div>
-                        <div className="createrecipe_container_form_content_item">
-                            <textarea type="text" className='form-input' placeholder="Separated by a comma: mix the vegetables, keep 1h in the fridge, ..." name='instructions' value={instructions} onChange={handleChangeInstructions} />
-                            <label for="instructions">Instructions</label>
-                        </div>
-                        <div className="createrecipe_container_form_content_item">
-                            <textarea type="text" className='form-input' placeholder="Separated by a comma: milk, butter, letuce, ..." value={ingredients} name='ingredients' onChange={handleChangeIngredients} />
-                            <label for="ingredients">Ingredients</label>
-                        </div>
+                        <Input type='Number' name='imgUrl' placeholder='Url of the picture of your recipe' />
+                        <TextArea type='text' name='ingredients' placeholder="Separated by a comma: milk, butter, letuce, ..." />
+                        <TextArea type='text' name='instructions' placeholder="Separated by a comma: mix the vegetables, keep 1h in the fridge, ..." />
                     </div>
                     <ButtonCustom name="Submit" className="secondary" handleClick={handleSubmit} />
                 </form>

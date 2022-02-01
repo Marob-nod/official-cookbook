@@ -1,8 +1,8 @@
-import { CHANGE_COOKINGTIME, CHANGE_IMGURL, CHANGE_INGREDIENTS, CHANGE_INSTRUCTIONS, CHANGE_LEVEL, CHANGE_PREPTIME, CHANGE_SERVES, CHANGE_TITLERECIPE, SET_ALL_RECIPES } from "../actions/recipe";
+import { CHANGE_COOKINGTIME, CHANGE_FIELD_CREATE_RECIPE, CHANGE_IMGURL, CHANGE_INGREDIENTS, CHANGE_INSTRUCTIONS, CHANGE_LEVEL, CHANGE_PREPTIME, CHANGE_SERVES, CHANGE_TITLERECIPE, SET_ALL_RECIPES } from "../actions/recipe";
 import dataRecipes from '../../../src/public/data/recipes'
 
 export const initialState = {
-  allRecipes: [],
+  allRecipes: dataRecipes,
   titleRecipe: '',
   serves: 0,
   level: 'easy',
@@ -20,10 +20,10 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         allRecipes: action.value,
       }
-    case CHANGE_TITLERECIPE:
+    case CHANGE_FIELD_CREATE_RECIPE:
       return {
         ...state,
-        titleRecipe: action.value,
+        [action.fieldName]: action.value,
       }
     case CHANGE_SERVES:
       return {

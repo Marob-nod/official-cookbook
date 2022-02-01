@@ -10,6 +10,7 @@ export const CHANGE_PREPTIME = 'CHANGE_PREPTIME';
 export const CHANGE_INSTRUCTIONS = 'CHANGE_INSTRUCTIONS';
 export const CHANGE_INGREDIENTS = 'CHANGE_INGREDIENTS';
 export const CHANGE_LEVEL = 'CHANGE_LEVEL';
+export const CHANGE_FIELD_CREATE_RECIPE = 'CHANGE_FIELD_CREATE_RECIPE'
 
 export const setAllRecipes = (value) => (
   {
@@ -75,4 +76,10 @@ export const changeImgUrl = (value) => (
     value,
   }
 );
-
+export const changeFieldCreateRecipe = (value, fieldName) => (
+  {
+    type: CREATE_RECIPE,
+    value,
+    fieldName,
+  }
+)
