@@ -2,39 +2,17 @@ import './styles.scss';
 import Header from '../../components/Header';
 import ButtonCustom from '../../components/Button-customized';
 import { useDispatch, useSelector } from 'react-redux'
-import { changeCookingTime, changeImgUrl, changeIngredients, changeInstructions, changeLevel, changePrepTime, changeServes, changeTitleRecipe, CHANGE_TITLERECIPE, createRecipe } from '../../Redux/actions/recipe';
-import { Input } from '@mui/material';
+import { changeIngredients, changeLevel, createRecipe } from '../../Redux/actions/recipe';
+import Input from '../../components/Input/index';
 import TextArea from '../../components/TextArea';
 
 const CreateRecipe = () => {
 
     const dispatch = useDispatch()
-    const titleRecipe = useSelector(state => state.recipe.titleRecipe)
-    const optionsAxios = useSelector(state => state.common.optionsAxios)
-    const serves = useSelector(state => state.recipe.serves)
-    const level = useSelector(state => state.recipe.level)
-    const imgUrl = useSelector(state => state.recipe.imgUrl)
-    const cookingTime = useSelector(state => state.recipe.cookingTime)
-    const prepTime = useSelector(state => state.recipe.prepTime)
-    const instructions = useSelector(state => state.recipe.instructions)
-    const ingredients = useSelector(state => state.recipe.ingredients)
 
     const handleSubmit = () => {
         dispatch(createRecipe())
     }
-
-    const handleChangeInstructions = (e) => {
-        const arr = e.target.value.split(', ')
-        console.log('Array recup : ', arr)
-        dispatch(changeInstructions(arr))
-    }
-
-    const handleChangeIngredients = (e) => {
-        const arr = e.target.value.split(', ')
-        console.log('Array recup : ', arr)
-        dispatch(changeIngredients(arr))
-    }
-
 
 
     // const createEvent = () => {
@@ -99,7 +77,7 @@ const CreateRecipe = () => {
 
                     </div>
                     <div>
-                        <Input type='Number' name='imgUrl' placeholder='Url of the picture of your recipe' />
+                        <Input type='url' name='imgUrl' placeholder='Url of the picture of your recipe' />
                         <TextArea type='text' name='ingredients' placeholder="Separated by a comma: milk, butter, letuce, ..." />
                         <TextArea type='text' name='instructions' placeholder="Separated by a comma: mix the vegetables, keep 1h in the fridge, ..." />
                     </div>
