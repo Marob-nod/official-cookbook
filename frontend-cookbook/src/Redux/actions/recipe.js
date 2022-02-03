@@ -34,6 +34,7 @@ export const changeFieldInstructionsIngredients = (value, fieldName) => (
   {
     type: CHANGE_FIELD_INSTRUCTIONS_INGREDIENTS,
     fieldName,
+    value,
   }
 );
 export const changeFieldCreateRecipe = (value, fieldName) => (

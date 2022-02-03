@@ -6,6 +6,7 @@ const apiMiddleware = (store) => (next) => (action) => {
   switch (action.type) {
     case GET_ALL_RECIPES: {
       const optionsAxios = store.getState().optionsAxios;
+      console.log(optionsAxios)
       axios.get('http://localhost:3001/recipes', optionsAxios)
         .then((response) => {
           store.dispatch(setAllRecipes(response.data))

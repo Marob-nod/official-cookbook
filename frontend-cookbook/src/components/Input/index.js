@@ -10,7 +10,6 @@ const Input = ({ type, name, placeholder, className, isRequired }) => {
     const dispatch = useDispatch()
     const value = useSelector(state => state.recipe[name])
     console.log("Le champ ", name, " a la valeur ", value)
-    console.log(className + '-input')
 
     return (
         <div className={className}>

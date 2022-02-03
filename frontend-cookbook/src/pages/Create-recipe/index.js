@@ -56,13 +56,13 @@ const CreateRecipe = () => {
             <Header />
             <div className="createrecipe_container_box">
                 <h1 className='title-page'>Proposes nous ta recette</h1>
-                <form className='createrecipe_container_form'>
-                    <h1><Input type='text' name='titleRecipe' placeholder='Title of your recipe' /></h1>
+                <form className='createrecipe_container_form' onSubmit={handleSubmit}>
+                    <h1><Input type='text' name='titleRecipe' placeholder='Title of your recipe' className="primary_field" isRequired={true} /></h1>
 
                     <div className='createrecipe_container_form_content'>
-                        <Input type='number' name='cookingTime' placeholder='Cooking Time' />
-                        <Input type='number' name='prepTime' placeholder='Preparation Time' />
-                        <Input type='number' name='serves' placeholder='Serves' />
+                        <Input type='number' name='cookingTime' placeholder='Cooking Time' className="primary_field" isRequired={true} />
+                        <Input type='number' name='prepTime' placeholder='Preparation Time' className="primary_field" isRequired={true} />
+                        <Input type='number' name='serves' placeholder='Serves' className="primary_field" isRequired={true} />
                         <div className='createrecipe_container_form_form-input_level'>
                             <p>Select a level for your recipe</p>
                             <div className='createrecipe_container_form_form-input_level-easy'>
@@ -81,11 +81,11 @@ const CreateRecipe = () => {
 
                     </div>
                     <div>
-                        <Input type='url' name='imgUrl' placeholder='Url of the picture of your recipe' />
+                        <Input type='url' name='imgUrl' placeholder='Url of the picture of your recipe' className="primary_field" isRequired={true} />
                         <TextArea type='text' name='ingredients' placeholder="Separated by a comma: milk, butter, letuce, ..." />
                         <TextArea type='text' name='instructions' placeholder="Separated by a comma: mix the vegetables, keep 1h in the fridge, ..." />
                     </div>
-                    <ButtonCustom name="Submit" className="secondary" handleClick={handleSubmit} />
+                    <button type="submit">Submit the form</button>
                 </form>
             </div>
         </div>
