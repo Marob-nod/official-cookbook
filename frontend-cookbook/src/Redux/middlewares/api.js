@@ -15,13 +15,11 @@ const apiMiddleware = (store) => (next) => (action) => {
       next(action);
       break;
     }
-    default:
-      next(action);
-  }
-  switch (action.type) {
     case CREATE_RECIPE: {
-      // const optionsAxios = store.getState().optionsAxios;
-      // axios.get('http://localhost:3001/recipes', optionsAxios, {
+      const serves = store.getState().serves
+
+      console.log("serves :", serves)
+      // axios.post('http://localhost:3001/recipes', optionsAxios, {
       //   "title": titleRecipe,
       //   "cookingTime": cookingTime,
       //   "prepTime": prepTime,
@@ -32,6 +30,7 @@ const apiMiddleware = (store) => (next) => (action) => {
       //   "imgUrl": imgUrl
       // })
       //   .then((response) => {
+      //     console.log('Votre recette a bien été créée !')
       //   }).catch(
       //     (error) => console.log('error'),
       //   );
@@ -41,6 +40,7 @@ const apiMiddleware = (store) => (next) => (action) => {
     default:
       next(action);
   }
+
 }
 
 export default apiMiddleware;

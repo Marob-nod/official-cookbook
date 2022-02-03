@@ -33,7 +33,7 @@ const reducer = (state = initialState, action = {}) => {
     case CHANGE_FIELD_INSTRUCTIONS_INGREDIENTS:
       return {
         ...state,
-        ingredients: action.value.split(', '),
+        [action.fieldName]: action.value,
 
       }
     default:

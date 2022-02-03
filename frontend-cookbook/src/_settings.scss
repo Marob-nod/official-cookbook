@@ -11,7 +11,10 @@ $animate: all 0.2s ease-in-out;
 * {
     text-decoration: none;
     list-style: none;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //text-align: center;
 }
 
 h1 {

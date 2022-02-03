@@ -17,9 +17,11 @@ export const getAllRecipes = () => (
     type: GET_ALL_RECIPES,
   }
 );
-export const createRecipe = () => (
+export const createRecipe = (ingredients, instructions) => (
   {
     type: CREATE_RECIPE,
+    ingredients,
+    instructions,
   }
 );
 export const changeLevel = (value) => (

@@ -3,13 +3,10 @@
 .banner_container {
     display: flex;
     max-width: 70vw;
-    //max-height: 50vh;
-    //min-height: 30vh;
     justify-content: center;
     align-items: center;
     text-align: justify;
-    //border: solid 2px $firstColor;
-    margin: 30px auto 10px auto;
+    margin: 10rem auto 5rem auto;
     background: $thirdColor;
     opacity: 0.9;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );

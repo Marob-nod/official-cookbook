@@ -1,0 +1,33 @@
+@import '../../settings';
+
+.primary_field {
+    width: 15rem;
+    margin: 2rem;
+    font-size: small;
+    
+    .primary_field-input {
+        display: flex;
+        border: 2px double $firstColor;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-top: 0.4rem;
+    }    
+    label {
+        font-weight: 1000;
+        color: $firstColor;
+        margin-left: 0.5rem;
+    }
+    input {
+        border: none;
+        margin-left: 0.5rem ;
+        outline: none;
+
+        &::placeholder {
+            font-size: 1000;
+        }
+    }
+    .primary_field-required {
+        color: red;
+        margin: 0.5rem 0 0 1rem;
+    }
+}

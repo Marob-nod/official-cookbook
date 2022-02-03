@@ -9,9 +9,13 @@ import TextArea from '../../components/TextArea';
 const CreateRecipe = () => {
 
     const dispatch = useDispatch()
+    const ingredients = useSelector(state => state.recipe.ingredients)
+    const instructions = useSelector(state => state.recipe.instructions)
 
     const handleSubmit = () => {
-        dispatch(createRecipe())
+        const ingredientsArray = ingredients.split(', ')
+        const instructionsArray = instructions.split(', ')
+        dispatch({ type: 'CREATE_RECIPE', ingredientsArray, instructionsArray })
     }
 
 

@@ -2,13 +2,12 @@
 
 .createrecipe_container_box {
     display: flex;
-    justify-content: center;
+    //justify-content: center;
     flex-direction: column;
-
-
+    margin-top: 7rem;
 
     .createrecipe_container_form {
-        width: 30%;
+        width: 50%;
         padding: 3rem;
         margin: auto;
         background-color: $thirdColor;
@@ -25,11 +24,17 @@
                 padding: 20px;
     
                 .createrecipe_container_form_form-input {
-                    margin: auto;
+                   width: 20%;
+                
                     
                 }
             }
         }  
+        textarea {
+            min-height: 100px;
+            text-align: left;
+            padding: 0.5rem;
+        }
     }
 
 }

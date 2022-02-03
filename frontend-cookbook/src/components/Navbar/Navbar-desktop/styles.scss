@@ -1,13 +1,17 @@
 @import '../../../settings';
 
 .navbar_container {
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
-    padding: 7px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     border-bottom: $firstColor solid 2px;
     font-weight: bold;
     font-size: 0.9rem;
-    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: white;
 
     svg {
         font-size: 50px;
@@ -20,7 +24,7 @@
         margin-left: 45px;        
         li {
             margin-right: 30px;
-            transition: ease-in-out 0.4s;
+            //transition: ease-in-out 0.4s;
             &:hover {
                 color: $firstColor;
                 cursor: pointer;
